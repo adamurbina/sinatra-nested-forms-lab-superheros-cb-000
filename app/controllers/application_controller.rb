@@ -10,10 +10,10 @@ class App < Sinatra::Base
 
     post '/teams' do
         "reached"
-        binding.pry
-        team = Team.new(params[:team])
-
-        erb :team
+        # binding.pry
+        # team = Team.new(params[:team])
+        #
+        # erb :team
     end
 
 end
