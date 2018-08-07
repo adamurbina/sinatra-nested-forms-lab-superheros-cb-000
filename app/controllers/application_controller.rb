@@ -13,7 +13,7 @@ class App < Sinatra::Base
         # binding.pry
         # team = Team.new(params[:team])
         #
-        # erb :team
+        erb :team
     end
 
 end
