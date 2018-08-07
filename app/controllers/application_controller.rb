@@ -9,6 +9,7 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
+        "reached"
         binding.pry
         team = Team.new(params[:team])
 
