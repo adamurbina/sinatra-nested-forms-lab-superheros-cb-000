@@ -6,4 +6,8 @@ class Team
         @motto = params[:motto]
         @members = []
     end
+
+    def add_member(member)
+        @members << member
+    end
 end
