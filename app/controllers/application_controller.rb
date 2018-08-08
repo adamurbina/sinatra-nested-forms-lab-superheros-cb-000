@@ -9,11 +9,13 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-        "reached"
+
         @team = Team.new(params[:team])
         params[:team][:members].each do |member_data|
-            member = Member.new(member_data)
-            team.add_member(member)
+            if member_data
+                member = Member.new(member_data)
+                team.add_member(member)
+            end
         end
 
         erb :team
