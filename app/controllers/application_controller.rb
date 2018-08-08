@@ -10,7 +10,7 @@ class App < Sinatra::Base
 
     post '/teams' do
         "reached"
-        team = Team.new(params[:team])
+        @team = Team.new(params[:team])
         params[:team][:members].each do |member_data|
             member = Member.new(member_data)
             team.add_member(member)
