@@ -15,7 +15,7 @@ class App < Sinatra::Base
         params[:team][:members].each do |member_data|
             if member_data
                 member = Member.new(member_data)
-                team.add_member(member)
+                @team.add_member(member)
             end
         end
 
